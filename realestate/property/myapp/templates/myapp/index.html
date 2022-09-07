@@ -1,0 +1,16 @@
+{% extends 'myapp/_footer.html' %} {% load static %}
+{% block content %}
+<style>
+    img{
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+
+    border: 1px solid #ddd;
+   }
+
+</style>
+
+<img src="{% static '/images/new.jpg' %}" width="60%" height="400" alt="My image">
+
+{% endblock %}

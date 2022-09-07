@@ -1,0 +1,82 @@
+{% extends 'myapp/_footer.html' %} {% load static %}
+{% block title %}
+<title>Add An Property</title>
+{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>Add An Property</h1>
+<hr>
+<form action="/add_prop" method="POST">
+    {% csrf_token %}
+    <label for="retailer">Name</label><br>
+    <input type="text" id="retailer" name="retailer" value="{{ retailer }}"><br>
+
+    <label for="title">Home Title</label><br>
+    <input type="text"  id="title" name="title" value="{{ title }}"><br>
+
+    <label for="email">Email</label><br>
+    <input type="email" id="email" name="email" value="{{ email }}"><br>
+
+    <label for="contact">Contact</label><br>
+    <input type="number" id="contact" name="contact" value="{{ contact }}"><br>
+
+    <label for="address">Address</label><br>
+    <textarea id="address" name="address" rows="4" cols="50"></textarea><br>
+
+    <label for="city">City</label><br>
+    <input type="text" id="city" name="city" value="{{ city }}"><br>
+
+    <label for="state">State</label><br>
+    <input type="text" id="state" name="state" value="{{ state }}"><br>
+
+    <label for="code">Pin Code</label><br>
+    <input type="number" id="code" name="code" value="{{ code }}"><br>
+
+    <label for="description">Description</label><br>
+    <textarea id="description" name="description" rows="5" cols="50"></textarea><br>
+
+    <label for="bedrooms">Bedrooms</label><br>
+    <input type="number" id="bedrooms" name="bedrooms" value="{{ bedrooms }}"><br>
+
+    <label for="bathrooms">Bathrooms</label><br>
+    <input type="number" id="bathrooms" name="bathrooms" value="{{ bathrooms }}"><br>
+
+     <label for="garage">Garage</label><br>
+    <input type="number" id="garage" name="garage" value="{{ garage }}"><br>
+
+    <label for="sqft">Sqft</label><br>
+    <input type="number" id="sqft" name="sqft" value="{{ sqft }}"><br>
+
+    <label for="lot_size">Lot_size</label><br>
+    <input type="number" id="lot_size" name="lot_size" value="{{ lot_size }}"><br>
+
+    <label for="price">Price</label><br>
+    <input type="number" id="price" name="price" value="{{ price }}"><br>
+
+    <label for="photo_main">Photo_Main</label><br>
+    <input type="file" id="photo_main" name="photo_main" value="{{ image }}"><br><br>
+
+    <label for="photo_1">Sub Photo_1</label><br>
+    <input type="file" id="photo_1" name="photo_1" value="{{ photo_1 }}"><br><br>
+
+    <label for="photo_2">Sub Photo_2</label><br>
+    <input type="file" id="photo_2" name="photo_2" value="{{ photo_2 }}"><br><br>
+
+    <label for="photo_3">Sub Photo_3</label><br>
+    <input type="file" id="photo_3" name="photo_3" value="{{ photo_3 }}"><br><br>
+
+    <label for="photo_4">Sub Photo_4</label><br>
+    <input type="file" id="photo_4" name="photo_4" value="{{ photo_4 }}"><br><br>
+
+    <label for="photo_5">Sub Photo_5</label><br>
+    <input type="file" id="photo_5" name="photo_5" value="{{ photo_5 }}"><br><br>
+
+    <label for="photo_6">Sub Photo_6</label><br>
+    <input type="file" id="photo_6" name="photo_6" value="{{ photo_6 }}"><br><br>
+
+    <hr>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+</div>
+{% endblock %}

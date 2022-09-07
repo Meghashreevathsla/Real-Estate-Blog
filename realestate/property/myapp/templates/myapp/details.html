@@ -1,0 +1,20 @@
+{% extends 'myapp/_footer.html' %} {% load static %}
+{% block title %}
+{% endblock %}
+{% block content %}
+
+<h1>{{ i.title }} Details</h1>
+<img src="{{ i.photo_1.url }}" class="rounded" width="200" height="150" alt="...">
+<img src="{{ i.photo_2.url }}" class="rounded" width="200" height="150" alt="...">
+<img src="{{ i.photo_3.url }}" class="rounded" width="200" height="150" alt="..."><br>
+
+
+
+<b>Bedrooms :<b/> {{i.bedrooms}}<br>
+<b>Bathrooms :<b/>{{i.bathrooms}}<br>
+<b>Description :<b/>{{i.description}}<br>
+<b>Email :<b/>{{i.email}}<br>
+<b>Contact :<b/>{{i.contact}}<br>
+
+{% endblock %}
+

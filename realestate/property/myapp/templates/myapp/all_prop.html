@@ -1,0 +1,23 @@
+{% extends 'myapp/_footer.html' %} {% load static %}
+{% block title %}
+<title>Property</title>
+{% endblock %}
+<h1>PROPERTY LIST</h1>
+{% block content %}
+{% for i in props %}
+<div class="card" style="width:18rem;">
+    <img src="{{ i.photo_main.url }}" class="rounded" width="500" height="300" alt="...">
+
+
+    <span class="badge badge-secondary text-white"><b>Price:</b>{{ i.price}}</span>
+    <h4 class="card-title">Owner:{{i.retailer}}</h4>
+<h4 class="card-title">Home:{{i.title}}</h4>
+<h4 class="card-title"> Sqrf  : {{i.sqft}}/ Lot_size  : {{i.lot_size}}<br></h4>
+<p class="card-text">
+  <b>Address</b>:{{i.address}}<br>{{i.city}} {{i.state}}
+</p>
+<a href="{% url 'all_details' i.id %}" class="btn btn-primary">More Info</a><br>
+
+      </div>
+{% endfor %}
+{% endblock %}

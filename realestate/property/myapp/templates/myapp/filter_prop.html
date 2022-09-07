@@ -1,0 +1,31 @@
+{% extends 'myapp/_footer.html' %}
+{% block title %}
+<title>Filter Property</title>
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+          <h1>Filter property Details!</h1>
+      <hr>
+      <form action="/filter_prop" method="post">
+    {% csrf_token %}
+    <label for="price">Search by Price</label><br>
+    <input type="number" id="price" name="price" value="{{ price }}"><br>
+
+    <label for="city">City</label><br>
+    <input type="text" id="city" name="city" value="{{ city }}"><br>
+
+    <label for="state">State</label><br>
+    <input type="text" id="state" name="state" value="{{ state }}"><br>
+
+     <label for="bedrooms">Bedrooms</label><br>
+    <input type="number" id="bedrooms" name="bedrooms" value="{{ bedrooms }}"><br>
+
+    <label for="bathrooms">Bathrooms</label><br>
+    <input type="number" id="bathrooms" name="bathrooms" value="{{ bathrooms }}"><br>
+
+    <hr>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+  </div>
+{% endblock %}
